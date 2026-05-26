@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VocaSwipe Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for VocaSwipe, a vocabulary learning app.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --surface-soft: #eef1ff;
+      --text: #161821;
+      --muted: #62697a;
+      --line: #dde2f0;
+      --brand: #5868d9;
+      --brand-dark: #3340a6;
+      --accent: #13b8c5;
+      --warm: #ff8a4c;
+      --shadow: 0 18px 50px rgba(20, 25, 48, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(19, 184, 197, 0.16), transparent 30%),
+        radial-gradient(circle at 88% 4%, rgba(88, 104, 217, 0.18), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #171a33 0%, #313a9d 52%, #13a6b2 100%);
+      color: #ffffff;
+      padding: 56px 20px 62px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -8% -42% 38%;
+      width: 440px;
+      height: 440px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-inner,
+    .page {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #ffffff 0%, #dce4ff 100%);
+      color: var(--brand);
+      font-size: 22px;
+      font-weight: 900;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 28px 0 12px;
+      font-size: clamp(36px, 8vw, 72px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 13px;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+
+    .page {
+      margin-top: -34px;
+      padding-bottom: 64px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .summary-card,
+    .policy-card,
+    .contact-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(221, 226, 240, 0.88);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card {
+      padding: 22px;
+    }
+
+    .summary-icon {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 14px;
+      border-radius: 13px;
+      background: var(--surface-soft);
+      color: var(--brand-dark);
+      font-weight: 900;
+    }
+
+    .summary-card h2 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .language-nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      padding: 14px 0;
+      margin: 8px 0 14px;
+      background: rgba(246, 247, 251, 0.86);
+      backdrop-filter: blur(16px);
+    }
+
+    .language-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 14px;
+      box-shadow: 0 8px 24px rgba(20, 25, 48, 0.08);
+    }
+
+    .policy-card {
+      padding: clamp(24px, 4vw, 44px);
+      margin-top: 18px;
+    }
+
+    .section-label {
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .policy-card h2 {
+      margin: 6px 0 18px;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.1;
+    }
+
+    .policy-card h3 {
+      margin: 30px 0 8px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .policy-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 10px 0 18px;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .notice {
+      margin: 24px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      background: #effcff;
+      color: #265d66;
+      font-weight: 650;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px;
+      margin-top: 22px;
+    }
+
+    .contact-card h2 {
+      margin: 0 0 4px;
+      font-size: 22px;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-button {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 14px;
+      background: var(--brand);
+      color: #ffffff;
+      font-weight: 900;
+      box-shadow: 0 12px 28px rgba(88, 104, 217, 0.28);
+    }
+
+    .footer {
+      padding: 30px 20px 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding-top: 38px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .contact-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="brand" aria-label="VocaSwipe">
+          <div class="brand-mark">VS</div>
+          <div class="brand-name">VocaSwipe</div>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p>How VocaSwipe handles account data, learning progress, reminders, ads, and diagnostics while you practice vocabulary.</p>
+        <div class="hero-meta">
+          <span class="pill">Last updated: May 26, 2026</span>
+          <span class="pill">English + Turkish</span>
+          <span class="pill">Vocabulary learning app</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="summary-grid" aria-label="Privacy summary">
+      <article class="summary-card">
+        <div class="summary-icon">01</div>
+        <h2>Learning data</h2>
+        <p>Progress, answers, levels, badges, streaks, and energy are used to make the learning experience work.</p>
+      </article>
+      <article class="summary-card">
+        <div class="summary-icon">02</div>
+        <h2>Ads and logs</h2>
+        <p>VocaSwipe may use AdMob for ads and Better Stack / Logtail for limited diagnostics and stability logs.</p>
+      </article>
+      <article class="summary-card">
+        <div class="summary-icon">03</div>
+        <h2>Your choices</h2>
+        <p>You can manage notifications from device settings and contact us for account or data deletion requests.</p>
+      </article>
+    </section>
+
+    <nav class="language-nav" aria-label="Language navigation">
+      <a href="#english">English</a>
+      <a href="#turkish">Türkçe</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="english" class="policy-card">
+      <div class="section-label">English</div>
+      <h2>VocaSwipe Privacy Policy</h2>
+      <p>VocaSwipe is a vocabulary learning application. This Privacy Policy explains what information we collect, how we use it, and what choices you have.</p>
+
+      <h3>Information We Collect</h3>
+      <p><strong>Account information.</strong> When you create an account, we may store your username and an internal user identifier. Authentication is handled through Supabase.</p>
+      <p>We do not intentionally store your password in plain text. Password authentication is managed by the authentication provider.</p>
+
+      <h3>Learning and App Progress Data</h3>
+      <p>To provide the learning experience, we store information such as:</p>
+      <ul>
+        <li>Selected learning language</li>
+        <li>Placement test status</li>
+        <li>Current level and progress score</li>
+        <li>Test sessions and answer results</li>
+        <li>Correct, wrong, and skipped answer counts</li>
+        <li>Learned words and weak words</li>
+        <li>Badges, streaks, energy balance, and app statistics</li>
+      </ul>
+      <p>This data is used to personalize your learning experience, show progress, and keep the app features working correctly.</p>
+
+      <h3>Local Device Preferences</h3>
+      <p>Some preferences may be stored locally on your device, such as theme preference, game control preference, guest user state, and reminder settings.</p>
+
+      <h3>Logs and Diagnostics</h3>
+      <p>We may collect limited technical logs to understand errors and improve app stability. Logs may include technical event names, app version, platform, user type, internal user id, username when needed for debugging, selected language pair, and error details.</p>
+      <p>We do not intentionally log passwords, raw authentication tokens, payment information, or sensitive personal content.</p>
+      <p>VocaSwipe may use Better Stack / Logtail or similar logging services for diagnostics.</p>
+
+      <h3>Notifications</h3>
+      <p>VocaSwipe may schedule local reminder notifications on your device. These reminders are used to help you continue your vocabulary practice. You can disable notifications from your device settings.</p>
+
+      <h3>Advertising</h3>
+      <p>VocaSwipe may show ads, including rewarded ads, through Google AdMob. AdMob and its partners may collect or use device information, advertising identifiers, IP address, usage data, or similar information to provide, measure, and improve ads.</p>
+      <p>You can learn more about how Google uses data from partner apps here: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">https://policies.google.com/technologies/partner-sites</a></p>
+
+      <h3>How We Use Information</h3>
+      <p>We use collected information to provide vocabulary tests and learning features, save your progress and statistics, personalize adaptive learning, manage badges, streaks, and energy, send local reminders, improve reliability, fix errors, show and measure ads, prevent abuse, and maintain app security.</p>
+
+      <h3>Data Sharing</h3>
+      <p>We do not sell your personal information.</p>
+      <p>We may share limited data with service providers that help us operate the app, including Supabase for authentication and database services, Google AdMob for advertising, Better Stack / Logtail for logging and diagnostics, and Expo-related services for app functionality such as notifications and builds.</p>
+      <p>These providers process data according to their own privacy policies and service terms.</p>
+
+      <h3>Guest Users</h3>
+      <p>You may use some parts of VocaSwipe as a guest. Guest progress and preferences may be stored locally on your device. If you delete the app or clear app data, guest data may be lost.</p>
+
+      <h3>Data Retention</h3>
+      <p>We keep account and learning progress data as long as your account exists or as needed to provide the app. Diagnostic logs may be retained for a limited period for debugging and reliability purposes.</p>
+
+      <h3>Data Deletion</h3>
+      <p>If you want your account or associated data to be deleted, you can contact us using the contact information below. We may need information that helps us identify your account, such as your username.</p>
+
+      <h3>Children's Privacy</h3>
+      <p>VocaSwipe is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe that a child has provided personal information, please contact us so we can take appropriate action.</p>
+
+      <h3>Security</h3>
+      <p>We use reasonable technical and organizational measures to protect app data. However, no method of transmission or storage is completely secure.</p>
+
+      <h3>Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the “Last updated” date above.</p>
+    </section>
+
+    <section id="turkish" class="policy-card">
+      <div class="section-label">Türkçe</div>
+      <h2>VocaSwipe Gizlilik Politikası</h2>
+      <p>VocaSwipe bir kelime öğrenme uygulamasıdır. Bu Gizlilik Politikası hangi bilgileri topladığımızı, bu bilgileri nasıl kullandığımızı ve hangi seçeneklere sahip olduğunuzu açıklar.</p>
+
+      <h3>Topladığımız Bilgiler</h3>
+      <p><strong>Hesap bilgileri.</strong> Hesap oluşturduğunuzda kullanıcı adınızı ve dahili kullanıcı kimliğinizi saklayabiliriz. Kimlik doğrulama Supabase üzerinden yönetilir.</p>
+      <p>Şifrenizi düz metin olarak bilinçli şekilde saklamayız. Şifreli giriş süreci kimlik doğrulama sağlayıcısı tarafından yönetilir.</p>
+
+      <h3>Öğrenme ve Uygulama İlerleme Verileri</h3>
+      <p>Öğrenme deneyimini sağlamak için aşağıdaki bilgileri saklayabiliriz:</p>
+      <ul>
+        <li>Seçilen öğrenme dili</li>
+        <li>Seviye tespit sınavı durumu</li>
+        <li>Mevcut seviye ve ilerleme puanı</li>
+        <li>Test oturumları ve cevap sonuçları</li>
+        <li>Doğru, yanlış ve “bilmiyorum” cevap sayıları</li>
+        <li>Öğrenilen kelimeler ve zayıf kelimeler</li>
+        <li>Rozetler, günlük seri, enerji durumu ve uygulama istatistikleri</li>
+      </ul>
+      <p>Bu veriler öğrenme deneyiminizi kişiselleştirmek, ilerlemenizi göstermek ve uygulama özelliklerinin doğru çalışmasını sağlamak için kullanılır.</p>
+
+      <h3>Cihazda Saklanan Yerel Tercihler</h3>
+      <p>Bazı tercihler cihazınızda yerel olarak saklanabilir: tema tercihi, oyun kontrol tercihi, misafir kullanıcı durumu ve hatırlatıcı ayarları.</p>
+
+      <h3>Loglar ve Tanılama</h3>
+      <p>Hataları anlamak ve uygulama kararlılığını artırmak için sınırlı teknik loglar toplayabiliriz. Loglar teknik olay adları, uygulama sürümü, platform, kullanıcı tipi, dahili kullanıcı kimliği, gerektiğinde kullanıcı adı, seçili dil çifti ve hata detaylarını içerebilir.</p>
+      <p>Şifreleri, ham kimlik doğrulama tokenlarını, ödeme bilgilerini veya hassas kişisel içerikleri bilinçli şekilde loglamayız.</p>
+      <p>VocaSwipe tanılama için Better Stack / Logtail veya benzeri loglama servislerini kullanabilir.</p>
+
+      <h3>Bildirimler</h3>
+      <p>VocaSwipe cihazınızda yerel hatırlatıcı bildirimleri planlayabilir. Bu hatırlatıcılar kelime çalışmanıza devam etmenize yardımcı olmak için kullanılır. Bildirimleri cihaz ayarlarınızdan kapatabilirsiniz.</p>
+
+      <h3>Reklamlar</h3>
+      <p>VocaSwipe, Google AdMob üzerinden reklamlar ve ödüllü reklamlar gösterebilir. AdMob ve iş ortakları reklam sunmak, ölçmek ve iyileştirmek için cihaz bilgileri, reklam tanımlayıcıları, IP adresi, kullanım verisi veya benzeri bilgileri toplayabilir ya da kullanabilir.</p>
+      <p>Google’ın iş ortağı uygulamalardan gelen verileri nasıl kullandığı hakkında daha fazla bilgi: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">https://policies.google.com/technologies/partner-sites</a></p>
+
+      <h3>Bilgileri Nasıl Kullanıyoruz?</h3>
+      <p>Toplanan bilgileri kelime testleri ve öğrenme özelliklerini sunmak, ilerlemenizi ve istatistiklerinizi kaydetmek, adaptif öğrenme deneyimini kişiselleştirmek, rozet, günlük seri ve enerji özelliklerini yönetmek, yerel hatırlatıcılar göndermek, uygulama kararlılığını artırmak, hataları gidermek, reklam göstermek ve ölçmek, kötüye kullanımı önlemek ve uygulama güvenliğini sağlamak için kullanırız.</p>
+
+      <h3>Veri Paylaşımı</h3>
+      <p>Kişisel bilgilerinizi satmayız.</p>
+      <p>Uygulamayı çalıştırmamıza yardımcı olan servis sağlayıcılarla sınırlı veri paylaşabiliriz: kimlik doğrulama ve veritabanı hizmetleri için Supabase, reklamlar için Google AdMob, loglama ve tanılama için Better Stack / Logtail, bildirimler ve uygulama altyapısı gibi işlevler için Expo ile ilişkili servisler.</p>
+      <p>Bu sağlayıcılar verileri kendi gizlilik politikaları ve hizmet şartlarına göre işler.</p>
+
+      <h3>Misafir Kullanıcılar</h3>
+      <p>VocaSwipe’ın bazı bölümlerini misafir olarak kullanabilirsiniz. Misafir ilerlemesi ve tercihleri cihazınızda yerel olarak saklanabilir. Uygulamayı silerseniz veya uygulama verilerini temizlerseniz misafir verileri kaybolabilir.</p>
+
+      <h3>Veri Saklama</h3>
+      <p>Hesap ve öğrenme ilerleme verilerini hesabınız var olduğu sürece veya uygulamayı sunmak için gerekli olduğu sürece saklarız. Tanılama logları hata ayıklama ve kararlılık amacıyla sınırlı süre saklanabilir.</p>
+
+      <h3>Veri Silme</h3>
+      <p>Hesabınızın veya ilişkili verilerinizin silinmesini isterseniz aşağıdaki iletişim bilgisinden bize ulaşabilirsiniz. Hesabınızı bulabilmemiz için kullanıcı adınız gibi bilgileri paylaşmanız gerekebilir.</p>
+
+      <h3>Çocukların Gizliliği</h3>
+      <p>VocaSwipe 13 yaş altı çocuklara yönelik değildir. 13 yaş altı çocuklardan bilerek kişisel bilgi toplamayız. Bir çocuğun kişisel bilgi sağladığını düşünüyorsanız, gerekli işlemleri yapabilmemiz için bizimle iletişime geçebilirsiniz.</p>
+
+      <h3>Güvenlik</h3>
+      <p>Uygulama verilerini korumak için makul teknik ve organizasyonel önlemler kullanırız. Ancak hiçbir iletim veya saklama yöntemi tamamen güvenli değildir.</p>
+
+      <h3>Bu Politikadaki Değişiklikler</h3>
+      <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Güncelleme yapıldığında yukarıdaki “Son güncelleme” tarihi değiştirilecektir.</p>
+    </section>
+
+    <section id="contact" class="contact-card">
+      <div>
+        <h2>Contact / İletişim</h2>
+        <p>For privacy questions or data deletion requests, contact us by email.</p>
+      </div>
+      <a class="contact-button" href="mailto:golcukhalil@outlook.com">golcukhalil@outlook.com</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 VocaSwipe. Privacy information for App Store and Google Play users.
+  </footer>
+</body>
+</html>
